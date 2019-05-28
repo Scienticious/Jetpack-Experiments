@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_activity.xml"
+    app:startDestination="@id/home_dest">
+
+    <fragment
+        android:id="@+id/home_dest"
+        android:name="com.app.jetpackexperiments.AFragment"
+        android:label="fragment_a"
+        tools:layout="@layout/fragment_a" >
+        <action
+            android:id="@+id/next_action"
+            app:destination="@id/b_dest" />
+    </fragment>
+    <fragment
+        android:id="@+id/b_dest"
+        android:name="com.app.jetpackexperiments.BFragment"
+        android:label="fragment_b"
+        tools:layout="@layout/fragment_b" >
+        <action
+            android:id="@+id/next_action"
+            app:destination="@id/c_dest" />
+    </fragment>
+    <fragment
+        android:id="@+id/c_dest"
+        android:name="com.app.jetpackexperiments.CFragment"
+        android:label="fragment_c"
+        tools:layout="@layout/fragment_c" >
+
+        <action
+            android:id="@+id/next_action"
+            app:popUpTo="@id/home_dest"/>
+
+    </fragment>
+</navigation>
