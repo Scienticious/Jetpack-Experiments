@@ -12,7 +12,11 @@
         tools:layout="@layout/fragment_a" >
         <action
             android:id="@+id/next_action"
-            app:destination="@id/b_dest" />
+            app:destination="@id/b_dest"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
     </fragment>
     <fragment
         android:id="@+id/b_dest"
@@ -21,7 +25,11 @@
         tools:layout="@layout/fragment_b" >
         <action
             android:id="@+id/next_action"
-            app:destination="@id/c_dest" />
+            app:destination="@id/c_dest"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
     </fragment>
     <fragment
         android:id="@+id/c_dest"
@@ -31,7 +39,11 @@
 
         <action
             android:id="@+id/next_action"
-            app:popUpTo="@id/home_dest"/>
+            app:popUpTo="@id/home_dest"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
 
     </fragment>
 </navigation>
