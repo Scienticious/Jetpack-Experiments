@@ -10,6 +10,13 @@
         android:name="com.app.jetpackexperiments.AFragment"
         android:label="fragment_a"
         tools:layout="@layout/fragment_a" >
+
+
+        <argument
+            android:name="flowStepNumber"
+            app:argType="integer"
+            android:defaultValue="0"/>
+
         <action
             android:id="@+id/next_action"
             app:destination="@id/b_dest"
@@ -23,6 +30,12 @@
         android:name="com.app.jetpackexperiments.BFragment"
         android:label="fragment_b"
         tools:layout="@layout/fragment_b" >
+
+        <argument
+            android:name="flowStepNumber"
+            app:argType="integer"
+            android:defaultValue="0"/>
+
         <action
             android:id="@+id/next_action"
             app:destination="@id/c_dest"
@@ -36,6 +49,13 @@
         android:name="com.app.jetpackexperiments.CFragment"
         android:label="fragment_c"
         tools:layout="@layout/fragment_c" >
+
+        <argument
+            android:name="flowStepNumber"
+            app:argType="integer"
+            android:defaultValue="0"/>
+
+
 
         <action
             android:id="@+id/next_action"

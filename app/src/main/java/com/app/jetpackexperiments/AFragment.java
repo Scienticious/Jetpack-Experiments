@@ -10,6 +10,7 @@ import android.widget.Button;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.NavDirections;
 import androidx.navigation.Navigation;
 
 public class AFragment extends Fragment {
@@ -26,7 +27,8 @@ public class AFragment extends Fragment {
         a.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Navigation.findNavController(v).navigate(R.id.next_action);
+                NavDirections action  =AFragmentDirections.nextAction().setFlowStepNumber(1);
+                Navigation.findNavController(v).navigate(action);
             }
         });
 
