@@ -11,6 +11,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class BFragment extends Fragment {
 
@@ -21,6 +22,14 @@ public class BFragment extends Fragment {
         View view =  inflater.inflate(R.layout.fragment_b, container, false);
 
         Button b =view.findViewById(R.id.button_b);
+        TextView tvB =view.findViewById(R.id.tv_b);
+
+//        int a =getArguments().getInt("flowStepNumber");
+//        tvB.setText(String.valueOf(a));
+
+        int a = BFragmentArgs.fromBundle(getArguments()).getFlowStepNumber();
+        tvB.setText(String.valueOf(a));
+
 
 
         b.setOnClickListener(new View.OnClickListener() {
